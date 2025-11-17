@@ -24,7 +24,7 @@ const Shop = ({ onBackToHome, onStartQuiz, onGoToProfile }) => {
 
   const loadUserProfile = async (email) => {
     try {
-      const { db } = await import('../utils/firebase');
+      const { db } = await import('../firebase');
       const { doc, getDoc } = await import('firebase/firestore');
       
       const docId = email.toLowerCase().trim().replace(/[^a-zA-Z0-9]/g, '_');
